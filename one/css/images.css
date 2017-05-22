@@ -1,0 +1,21 @@
+.pic{
+    width: 240px;
+    height: 230px;
+    box-sizing: border-box;
+    float:left;
+    text-align: center;
+    /*background-color: #ff0000;*/
+    border: 1px solid #ccc;
+    margin: 100px 30px;
+    overflow:hidden;
+
+}
+img{
+    transition:all 1s;
+}
+img:hover{
+    transform:scale(1.1,1.1);
+}
+
+
+

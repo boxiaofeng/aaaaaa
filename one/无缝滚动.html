@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .all{
+            width: 100%;
+            background-color: #fafafa;
+            font-size: 12px;
+        }
+        .w{
+            width: 1200px;
+            margin:0 auto;
+        }
+        .box{
+            width: 880px;
+            height: 300px;
+            box-sizing:border-box;
+            background-color: #ffff00;
+            margin:100px auto;
+            padding: 20px;
+            overflow:hidden;
+            position: relative;
+        }
+        ul{
+            height: 300px;
+            margin:60px auto;
+            position: absolute;
+            top:0;
+            left:0
+        }
+        ul li{
+            float:left;
+            list-style:none;
+        }
+        ul li img{
+            width: 150px;
+            height:150px;
+            margin:10px 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="all">
+    <div class="w">
+        <a href="javascript:;">向左走</a>
+          <a href="javascript:;">向右走</a>
+        <div class="box">
+            <ul>
+                <li><img src="images/chanpin1_01.jpg" alt=""></li>
+                <li><img src="images/chanpin1_02.jpg" alt=""></li>
+                <li><img src="images/chanpin1_03.jpg" alt=""></li>
+                <li><img src="images/chanpin1_04.jpg" alt=""></li>
+                <li><img src="images/chanpin1_05.jpg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    var box = document.getElementById("div");
+    var oul=document.getElementsByTagName("ul")[0];
+    var lists=document.getElementsByTagName("li");
+
+    var speed = 5;
+    oul.innerHTML+=oul.innerHTML;
+//    console.log(lists.length);
+//    console.log(lists[0].offsetWidth);
+//    console.log(lists[0].offsetWidth *lists.length);
+
+    oul.style.width=lists[0].offsetWidth *lists.length+"px";
+    console.log(oul.offsetWidth / 2);
+    function move(){
+        if (oul.offsetLeft < -oul.offsetWidth / 2) {
+            oul.style.left = '0';
+        }
+        if (oul.offsetLeft > 0) {
+            oul.style.left = -oul.offsetWidth / 2 + 'px';
+        }
+        oul.style.left = oul.offsetLeft+speed+"px";
+    }
+    var timer=setInterval(move,30);
+    oul.onmouseover = function() {
+        clearInterval(timer);
+    };
+    oul.onmouseout = function() {
+        timer = setInterval(move, 30);
+    };
+    document.getElementsByTagName('a')[0].onclick = function() {
+        speed = -5;
+    };
+    document.getElementsByTagName('a')[1].onclick = function() {
+        speed = 5;
+    };
+</script>
+</body>
+</html>

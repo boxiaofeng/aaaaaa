@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul li{
+            float:left;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color: #ff0;
+            list-style: none;
+            margin: 10px;
+        }
+        .active{
+            background-color: #dff;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="#">标题一</a></li>
+    <li><a href="#">标题一</a></li>
+    <li><a href="#">标题一</a></li>
+    <li><a href="#">标题一</a></li>
+    <li><a href="#">标题一</a></li>
+    <li><a href="#">标题一</a></li>
+    <li><a href="#">标题一</a></li>
+    <li><a href="#">标题一</a></li>
+</ul>
+<script src="js/jquery-3.0.0.min.js"></script>
+<script>
+    $("ul li").mouseenter(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+    })
+
+</script>
+</body>
+</html>

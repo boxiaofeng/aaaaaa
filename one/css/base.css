@@ -1,0 +1,34 @@
+*{
+    margin:0;
+    padding:0;
+}
+.all{
+    width: 100%;
+    background-color: #fafafa;
+    font-size: 12px;
+}
+.w{
+    width: 1200px;
+    margin:0 auto;
+}
+.clearfix:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.red{
+    color: #f00!important;
+}
+.active{
+    background-color: #f00!important;
+}
+.gray{
+    background-color:#fafafa!important;
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+a:hover{
+    color:red;
+}

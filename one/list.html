@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 150px;
+            height: 30px;
+            background-color: #ff0;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    ddjdlsd;l
+</div>
+
+
+<script>
+
+    var div=document.getElementById("div1");
+    div.onmouseover=function(){
+        div.style.backgroundColor="red";
+        console.log(div.innerHTML);
+    }
+    div.onmouseleave=function(){
+        div.style.backgroundColor="yellow";
+        console.log(div.innerHTML);
+    }
+</script>
+</body>
+</html>

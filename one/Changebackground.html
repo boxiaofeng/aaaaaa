@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 660px;
+            height: 360px;
+        }
+    </style>
+</head>
+<body>
+<div><img src="images/c1.jpg" alt="" id="IMG"></div>
+<script>
+    window.onload = function(){
+
+        setInterval(add,1000);
+
+    }
+    var pic=document.getElementById("IMG");
+    var num=1;
+    function add(){
+        if(num>5){
+            num=1;
+        }
+        else{
+            num++;
+        }
+
+        pic.src='images/c'+num+'.jpg';
+    }
+
+
+</script>
+</body>
+</html>
